@@ -1,24 +1,29 @@
 import random
-playera = input("what is player a name? ")
+namna = input("what is player a name? ")
 
-playerA = 100
-playerB = 100
+playera = 100
+playerb = 100
 
 
-while (playerA >0 and playerB >0):
+while (playera >0 and playerb >0 ):
     damage = random.randint(10,20)
-    damage2 = random.randint(10,20)
+    playera -= damage
+    print (damage)
+    print (namna,  "hits playerb with ", damage, "damage points")
+    if(playera <= 0):
+        print("playerb wins")
+        break
+      
+    damage = random.randint(10,20)
+    playerb -= damage
+    print("playerB hits", namna, "with", damage, "damage points")
+    if (playerb <= 0):
+        print(namna, "wins")
+        break
 
-    print(playera, "hits playerB with ", damage, "damage points")
-    playerB = playerB - damage
-    print("playerB hits", playera, "with", damage2, "damage points")
-    playerA = playerA - damage
 
 else:
-    print("Game over")
+    print("tied")
 
-if(playerA > 0):
-    print(playera, "wins")
 
-else:
-    print("playerB wins")
+
