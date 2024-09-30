@@ -1,0 +1,35 @@
+# Början av berättelsen
+print("Du står framför ett gammalt hus i skogen.")
+val1 = input("Vill du gå in i huset (skriv 'hus') eller gå runt det (skriv 'runt')? ").lower()
+
+# Gå in i huset
+if val1 == "hus":
+    print("Du går in i huset och hör ett mystiskt ljud från källaren.")
+    val2 = input("Vill du gå ner i källaren (skriv 'källare') eller stanna på övervåningen (skriv 'övervåning')? ").lower()
+    
+    if val2 == "källare":
+        print("Du går ner i källaren och hittar en gömd skatt!")
+        # Slut 1
+    elif val2 == "övervåning":
+        print("På övervåningen hittar du ett rum fyllt med gamla böcker.")
+        # Slut 2
+    else:
+        print("Ogiltigt val, berättelsen avslutas här.")
+
+# Gå runt huset
+elif val1 == "runt":
+    print("Du går runt huset och hittar en hemlig trädgård.")
+    val2 = input("Vill du utforska trädgården (skriv 'trädgård') eller gå tillbaka till huset (skriv 'tillbaka')? ").lower()
+    
+    if val2 == "trädgård":
+        print("Du hittar en magisk fontän i trädgården.")
+        # Slut 3
+    elif val2 == "tillbaka":
+        print("Du går tillbaka och upptäcker att dörren till huset är låst.")
+        # Slut 4
+    else:
+        print("Ogiltigt val, berättelsen avslutas här.")
+
+# Felaktigt val i början
+else:
+    print("Ogiltigt val, berättelsen avslutas här.")
